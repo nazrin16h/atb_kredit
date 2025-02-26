@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nagd " id="f1" onclick="change(true)">
+                <li class="avtive-p">
+                    <img src="img/money-svgrepo-com.svg" alt="">
+                </li>
+                <span class="tab"  >Nağd krediti hesabla</span>
+            </div>
+            <div class="emanet"  id="f2" onclick="change(false)">
+                <li>
+                    <img src="img/accounting-budget-calc-svgrepo-com.svg" alt="">
+                </li>
+                <span class="tab" >Əmanət üzrə gəliri hesabla</span>
+            </div>
+        </div>
+        <h1>nağd kreditli hesabla</h1>
+        <div class="calc">
+            <div class="calc-main">
+                <div class="input-container">
+                    <span>hansi məbləğ arzunuzu reallaşdırar?</span>
+                    <input type="text" id="amount" value="5000 AZN" readonly>
+                </div>
+                <input type="range" id="amountRange" class="slider1" min="300" max="40000" value="5000"
+                    oninput="updateAmount(this.value);ayliqodenis()">
+
+                <div class="input-container">
+                    <span>müddəti seçin</span>
+                    <input type="text" id="duration" value="12 ay" readonly>
+                </div>
+                <input type="range" id="durationRange" class="slider2" min="3" max="48" value="12"
+                    oninput="updateDuration(this.value);ayliqodenis() ">
+                <div id="check">
+                    <input type="checkbox" name="" id="">
+                    <span>"sifariş" düyməsini basaraq <a href="#">müraciət qaydaları</a> ilə razılaşmış olursunuz</span>
+                </div>
+            </div>
+            <div class="calc-book">
+                <h2>bizim təklif</h2>
+                <div class="details">
+                    <div>
+                        <span>faiz dərəcəsi</span>
+                        <span id="faiz">11%</span>
+                    </div>
+                    <div>
+                        <span>aylıq ödəniş</span>
+                        <span id="monthsAmount">442</span>
+                    </div>
+                </div>
+                <a href="#" class="order-btn">sifariş</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
